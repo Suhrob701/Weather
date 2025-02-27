@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ob-Havo Ilovasi</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+            transition: background 1s ease-in-out;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 25px;
+            border: none;
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+            text-align: center;
+            font-size: 16px;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+        }
+
+        img {
+            width: 100px;
+            margin: 20px auto;
+            filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.3));
+        }
+
+        h1,
+        h2,
+        p {
+            margin: 10px 0;
+        }
+
+        #currentDate {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 15px;
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+
+        #currentDate:hover {
+            background: rgba(255, 255, 255, 0.3);
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" id="cityInput" placeholder="Shahar yoki davlat nomini kiriting">
+        <button onclick="getWeather()">🔍 Qidirish</button>
+
+        <div id="weatherInfo">
+            <img id="weatherIcon" src="https://cdn-icons-png.flaticon.com/512/1779/1779940.png" alt="Havo belgisi">
+            <h1 id="cityName">🌍 Shahar</h1>
+            <h2 id="temperature">🌡 Harorat</h2>
+            <p id="humidity">💧 Namlik</p>
+            <p id="windSpeed">🌬 Shamol tezligi</p>
+        </div>
+        <p id="currentDate"></p>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
